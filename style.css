@@ -105,6 +105,11 @@ header nav{
    cursor: pointer;
 }
 
+/*menu movil*/
+header .menu-movil{
+    display: none;
+}
+
 .contenido{
     position: absolute;
     margin-top: 80px;
@@ -189,7 +194,12 @@ header nav{
 }
 
 
+/*Especificaciones en base a medida de pantalla*/
+
+/*Version Tablet*/
 @media (max-width: 1200px) {
+
+/*Medida de contenedor de imagenes y tarjetas*/ 
     .imagenes{
         columns: 3 200px;
         margin-left: 2%;
@@ -201,18 +211,64 @@ header nav{
         min-width: 180px;
         max-width: 200px;
     }
+    
   }
 
-
+/*Version Movil*/
   @media (max-width: 450px) {
+/*Ocultar menu de navegacion*/
+    header .menu{
+        display: none;
+    }
+
+    header .menu-movil{
+        display: inline;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+
+    .menu-movil li{
+        width: 60px;
+        list-style: none;
+        color: #c0bbbb;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .menu-movil li:first-child{
+        color: white;
+
+    }
+
+    .menu-movil li span{
+       font-size: 35px;
+
+    }
+
+    .contenido {
+        margin-top: 10px;
+    }
+
+/*Medida de contendor de imagenes y tarjetas*/ 
+
     .imagenes{
         columns: 2 180px;
     }
 
     .card-image img{
-        border-radius: 15px;
         min-width: 100px;
         max-width: 180px;
     }
+
   }
   
